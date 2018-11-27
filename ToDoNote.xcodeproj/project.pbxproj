@@ -14,6 +14,9 @@
 		85E41AF621AB830D00FC8F8A /* ToDoNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85E41AF421AB830D00FC8F8A /* ToDoNote.xcdatamodeld */; };
 		85E41AF821AB830F00FC8F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E41AF721AB830F00FC8F8A /* Assets.xcassets */; };
 		85E41AFB21AB830F00FC8F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E41AF921AB830F00FC8F8A /* LaunchScreen.storyboard */; };
+		85ED602A21AD1A37008FD0C2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED602921AD1A37008FD0C2 /* CollectionViewCell.swift */; };
+		85ED603521AD4858008FD0C2 /* ViewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED603421AD4858008FD0C2 /* ViewNoteViewController.swift */; };
+		85ED603721AD4878008FD0C2 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ED603621AD4878008FD0C2 /* EditNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		85E41AF721AB830F00FC8F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E41AFA21AB830F00FC8F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85E41AFC21AB830F00FC8F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85ED602921AD1A37008FD0C2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../Views/CollectionViewCell.swift; sourceTree = "<group>"; };
+		85ED603421AD4858008FD0C2 /* ViewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoteViewController.swift; sourceTree = "<group>"; };
+		85ED603621AD4878008FD0C2 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +48,11 @@
 		85E3499021AB8FAD0063143D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				85ED602921AD1A37008FD0C2 /* CollectionViewCell.swift */,
 				85E41AED21AB830D00FC8F8A /* AppDelegate.swift */,
 				85E41AEF21AB830D00FC8F8A /* ViewController.swift */,
+				85ED603421AD4858008FD0C2 /* ViewNoteViewController.swift */,
+				85ED603621AD4878008FD0C2 /* EditNoteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,8 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85ED603521AD4858008FD0C2 /* ViewNoteViewController.swift in Sources */,
 				85E41AF021AB830D00FC8F8A /* ViewController.swift in Sources */,
 				85E41AF621AB830D00FC8F8A /* ToDoNote.xcdatamodeld in Sources */,
+				85ED602A21AD1A37008FD0C2 /* CollectionViewCell.swift in Sources */,
+				85ED603721AD4878008FD0C2 /* EditNoteViewController.swift in Sources */,
 				85E41AEE21AB830D00FC8F8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
