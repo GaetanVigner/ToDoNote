@@ -10,7 +10,7 @@
 		47575FE721B19FBF00060DDA /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47575FE621B19FBF00060DDA /* CoreData.swift */; };
 		794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */; };
 		794AAC7E21B13F8500C79066 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */; };
-		852BF1A321ADA6FF00D0E277 /* Note logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 852BF1A221ADA6FE00D0E277 /* Note logo.png */; };
+		851C20A021B1DDAB00FE86E4 /* Note logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 851C209F21B1DDAB00FE86E4 /* Note logo.png */; };
 		85E2BD1B21B1AB5900EF542D /* clock140.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E2BD1A21B1AB5700EF542D /* clock140.png */; };
 		85E2BD1D21B1AB8600EF542D /* menu140.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E2BD1C21B1AB8500EF542D /* menu140.png */; };
 		85E2BD1F21B1ABF800EF542D /* bell140.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E2BD1E21B1ABF800EF542D /* bell140.png */; };
@@ -31,7 +31,7 @@
 		47575FE621B19FBF00060DDA /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreData.swift; path = ToDoNote/CoreData.swift; sourceTree = SOURCE_ROOT; };
 		794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + Toolbar.swift"; sourceTree = "<group>"; };
 		794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
-		852BF1A221ADA6FE00D0E277 /* Note logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Note logo.png"; sourceTree = "<group>"; };
+		851C209F21B1DDAB00FE86E4 /* Note logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Note logo.png"; sourceTree = "<group>"; };
 		85E2BD1A21B1AB5700EF542D /* clock140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock140.png; sourceTree = "<group>"; };
 		85E2BD1C21B1AB8500EF542D /* menu140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu140.png; sourceTree = "<group>"; };
 		85E2BD1E21B1ABF800EF542D /* bell140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell140.png; sourceTree = "<group>"; };
@@ -109,11 +109,11 @@
 		85E3499421AB8FF90063143D /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				851C209F21B1DDAB00FE86E4 /* Note logo.png */,
 				85E2BD2021B1C0F700EF542D /* pencileditblackcircularbuttoninterfacesymbol_104762.png */,
 				85E2BD1C21B1AB8500EF542D /* menu140.png */,
 				85E2BD1A21B1AB5700EF542D /* clock140.png */,
 				85E2BD1E21B1ABF800EF542D /* bell140.png */,
-				852BF1A221ADA6FE00D0E277 /* Note logo.png */,
 				85E41AF721AB830F00FC8F8A /* Assets.xcassets */,
 				85E3498E21AB89350063143D /* Plus_button.png */,
 			);
@@ -213,7 +213,7 @@
 				85E2BD2121B1C0F700EF542D /* pencileditblackcircularbuttoninterfacesymbol_104762.png in Resources */,
 				85E2BD1D21B1AB8600EF542D /* menu140.png in Resources */,
 				85E2BD1F21B1ABF800EF542D /* bell140.png in Resources */,
-				852BF1A321ADA6FF00D0E277 /* Note logo.png in Resources */,
+				851C20A021B1DDAB00FE86E4 /* Note logo.png in Resources */,
 				85E41AFB21AB830F00FC8F8A /* LaunchScreen.storyboard in Resources */,
 				85E3498F21AB89350063143D /* Plus_button.png in Resources */,
 				85E41AF821AB830F00FC8F8A /* Assets.xcassets in Resources */,
