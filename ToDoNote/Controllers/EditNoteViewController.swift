@@ -13,10 +13,15 @@ class EditNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(addTapped))
         // Do any additional setup after loading the view.
     }
     
 
+    func addTapped()
+    {
+        
+    }
     /*
     // MARK: - Navigation
 
