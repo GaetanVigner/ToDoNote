@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47575FE721B19FBF00060DDA /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47575FE621B19FBF00060DDA /* CoreData.swift */; };
 		794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */; };
+		794AAC7E21B13F8500C79066 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */; };
 		85E3498F21AB89350063143D /* Plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E3498E21AB89350063143D /* Plus_button.png */; };
 		85E41AEE21AB830D00FC8F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E41AED21AB830D00FC8F8A /* AppDelegate.swift */; };
 		85E41AF021AB830D00FC8F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E41AEF21AB830D00FC8F8A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		47575FE621B19FBF00060DDA /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreData.swift; path = ToDoNote/CoreData.swift; sourceTree = SOURCE_ROOT; };
 		794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + Toolbar.swift"; sourceTree = "<group>"; };
+		794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		85E3498E21AB89350063143D /* Plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus_button.png; sourceTree = "<group>"; };
 		85E41AEA21AB830D00FC8F8A /* ToDoNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E41AED21AB830D00FC8F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				85E41AEF21AB830D00FC8F8A /* ViewController.swift */,
 				85ED603421AD4858008FD0C2 /* ViewNoteViewController.swift */,
 				85ED603621AD4878008FD0C2 /* EditNoteViewController.swift */,
+				794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				47575FE721B19FBF00060DDA /* CoreData.swift in Sources */,
 				85ED603721AD4878008FD0C2 /* EditNoteViewController.swift in Sources */,
 				85E41AEE21AB830D00FC8F8A /* AppDelegate.swift in Sources */,
+				794AAC7E21B13F8500C79066 /* LocationSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

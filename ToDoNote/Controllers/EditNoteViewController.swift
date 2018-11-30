@@ -14,19 +14,22 @@ class EditNoteViewController: UIViewController {
         super.viewDidLoad()
         let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(EditNoteViewController.dismissPicker))
         dateTextField.inputAccessoryView = toolBar
-        // Do any additional setup after loading the view.
     }
 
-    
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var detailInput: UITextField!
+    @IBOutlet weak var locationInput: UITextField!
     
+   
+    @IBAction func locationInputTouched(_ sender: Any) {
+        locationInput.endEditing(true)
+        performSegue(withIdentifier: "searchLocation", sender: Any?.self)
+    }
     
     @objc func dismissPicker() {
         view.endEditing(true)
     }
-    
     
     @IBAction func deleteNote(_ sender: Any) {
     }
@@ -35,7 +38,7 @@ class EditNoteViewController: UIViewController {
         if titleInput.text == nil || titleInput.text == "" ||
             detailInput.text == nil || detailInput.text == "" {
             let alertController = UIAlertController(title: "Error in input", message: "Please enter a correct title and description for your task", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         } else {
             let myData = MyData()
@@ -57,14 +60,11 @@ class EditNoteViewController: UIViewController {
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
     
-   /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindToEdit(_ sender: UIStoryboardSegue){
+        if sender.source is LocationSearchViewController{
+            if let senderVC = sender.source as? LocationSearchViewController {
+                self.locationInput.text = senderVC.newLocation
+            }
+        }
     }
-    */
-
 }
