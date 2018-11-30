@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,42 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Note logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="qu0-qD-WYe">
+                                <rect key="frame" x="70" y="201" width="285" height="285"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qu0-qD-WYe" secondAttribute="height" multiplier="1:1" id="TKA-PC-gWf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDoNote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOb-5P-3ew">
+                                <rect key="frame" x="95" y="516" width="185" height="51.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53468488288242055" green="0.89995253018813881" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qu0-qD-WYe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="057-vO-yKl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dOb-5P-3ew" secondAttribute="trailing" priority="300" constant="30" id="1xA-Jd-sRw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dOb-5P-3ew" secondAttribute="bottom" priority="200" constant="30" id="Dqi-ZC-Kus"/>
+                            <constraint firstItem="dOb-5P-3ew" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="185:667" id="P7E-tV-x9b"/>
+                            <constraint firstItem="qu0-qD-WYe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Rhc-nl-kjH"/>
+                            <constraint firstItem="qu0-qD-WYe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="YfP-Be-5Ox"/>
+                            <constraint firstItem="dOb-5P-3ew" firstAttribute="top" secondItem="qu0-qD-WYe" secondAttribute="bottom" constant="30" id="bE0-ex-2oz"/>
+                            <constraint firstItem="qu0-qD-WYe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="25" id="jO7-Uz-Iji"/>
+                            <constraint firstItem="qu0-qD-WYe" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1:1" priority="200" id="qbO-aV-ZPr"/>
+                            <constraint firstItem="dOb-5P-3ew" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="raA-hd-5AG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Note logo.png" width="400" height="400"/>
+    </resources>
 </document>

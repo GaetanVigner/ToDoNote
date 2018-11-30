@@ -20,8 +20,9 @@ class EditNoteViewController: UIViewController {
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var detailInput: UITextField!
     @IBOutlet weak var locationInput: UITextField!
+    @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var notificationTextField: UITextField!
     
-   
     @IBAction func locationInputTouched(_ sender: Any) {
         locationInput.endEditing(true)
         performSegue(withIdentifier: "searchLocation", sender: Any?.self)
