@@ -32,6 +32,15 @@ class EditNoteViewController: UIViewController {
     }
     
     @IBAction func saveNote(_ sender: Any) {
+        if titleInput.text == nil || titleInput.text == "" ||
+            detailInput.text == nil || detailInput.text == "" {
+            let alertController = UIAlertController(title: "Error in input", message: "Please enter a correct title and description for your task", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        } else {
+            let myData = MyData()
+            myData.saveData(title: titleInput.text!, text: detailInput.text!)
+        }
     }
     
     @IBAction func textFieldEditing(_ sender: UITextField) {
