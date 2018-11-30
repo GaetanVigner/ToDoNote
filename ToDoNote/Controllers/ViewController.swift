@@ -34,4 +34,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         viewNoteViewController?.selectedtitle = self.items[indexPath.row]
         self.navigationController?.pushViewController(viewNoteViewController!, animated: true)
     }
+    
+    @IBAction func unwindToMenu(_ sender: UIStoryboardSegue){
+        
+    }
 }
