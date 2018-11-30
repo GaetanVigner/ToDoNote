@@ -38,7 +38,7 @@ class EditNoteViewController: UIViewController {
         if titleInput.text == nil || titleInput.text == "" ||
             detailInput.text == nil || detailInput.text == "" {
             let alertController = UIAlertController(title: "Error in input", message: "Please enter a correct title and description for your task", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         } else {
             let myData = MyData()
