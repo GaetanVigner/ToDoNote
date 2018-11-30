@@ -191,6 +191,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="colorFieldEditing:" destination="34H-Mk-4fW" eventType="editingDidBegin" id="PO6-pO-TpF"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,9 +242,11 @@
                         <viewLayoutGuide key="safeArea" id="URQ-sD-tTX"/>
                     </view>
                     <connections>
+                        <outlet property="colorTextField" destination="LRE-Xv-7RI" id="tXa-Jh-NNQ"/>
                         <outlet property="dateTextField" destination="qsG-eF-gBw" id="r2n-K9-gBR"/>
                         <outlet property="detailInput" destination="TQZ-wL-l1D" id="Wqk-E0-H5H"/>
                         <outlet property="locationInput" destination="zY0-P7-hEc" id="1c9-IR-CJk"/>
+                        <outlet property="notificationTextField" destination="QGY-Jw-Auw" id="PL0-tu-DJU"/>
                         <outlet property="searchDisplayController" destination="mAN-NQ-Rqc" id="tCl-zo-XfB"/>
                         <outlet property="titleInput" destination="Xti-La-eRV" id="GLB-SV-2sQ"/>
                         <segue destination="Qdh-L2-fDN" kind="show" identifier="searchLocation" id="H8Y-dD-qJ1"/>
