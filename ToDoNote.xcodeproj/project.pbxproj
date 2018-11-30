@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47575FE721B19FBF00060DDA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47575FE621B19FBF00060DDA /* File.swift */; };
+		47575FE721B19FBF00060DDA /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47575FE621B19FBF00060DDA /* CoreData.swift */; };
 		794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */; };
 		85E3498F21AB89350063143D /* Plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E3498E21AB89350063143D /* Plus_button.png */; };
 		85E41AEE21AB830D00FC8F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E41AED21AB830D00FC8F8A /* AppDelegate.swift */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		47575FE621B19FBF00060DDA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = ToDoNote/File.swift; sourceTree = SOURCE_ROOT; };
+		47575FE621B19FBF00060DDA /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreData.swift; path = ToDoNote/CoreData.swift; sourceTree = SOURCE_ROOT; };
 		794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + Toolbar.swift"; sourceTree = "<group>"; };
 		85E3498E21AB89350063143D /* Plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus_button.png; sourceTree = "<group>"; };
 		85E41AEA21AB830D00FC8F8A /* ToDoNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +72,7 @@
 		85E3499121AB8FAD0063143D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				47575FE621B19FBF00060DDA /* File.swift */,
+				47575FE621B19FBF00060DDA /* CoreData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 				85E41AF621AB830D00FC8F8A /* ToDoNote.xcdatamodeld in Sources */,
 				794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */,
 				85ED602A21AD1A37008FD0C2 /* CollectionViewCell.swift in Sources */,
-				47575FE721B19FBF00060DDA /* File.swift in Sources */,
+				47575FE721B19FBF00060DDA /* CoreData.swift in Sources */,
 				85ED603721AD4878008FD0C2 /* EditNoteViewController.swift in Sources */,
 				85E41AEE21AB830D00FC8F8A /* AppDelegate.swift in Sources */,
 			);

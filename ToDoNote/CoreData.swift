@@ -14,7 +14,22 @@ class MyData {
     
     var myItems : [NSManagedObject] = []
     
-    func getData(index: Int) ->NSManagedObject? {
+    func getDatas() ->[NSManagedObject]?
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchData = NSFetchRequest<NSManagedObject>(entityName: "Task")
+        
+        do {
+            myItems = try context.fetch(fetchData)
+            return myItems
+        } catch {
+            return nil
+        }
+    }
+    
+    func getData(index: Int) ->NSManagedObject?
+    {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchData = NSFetchRequest<NSManagedObject>(entityName: "Task")
@@ -50,15 +65,25 @@ class MyData {
     
     func deleteData(index : Int)
     {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        context.delete(myItems[index])
-        myItems.remove(at: index)
-        
-        do {
-            try context.save()
-        } catch {
+        if myItems.count > index {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            context.delete(myItems[index])
+            myItems.remove(at: index)
+            
+            do {
+                try context.save()
+            } catch {
+                print("Fail to delete")
+            }
+        } else {
             print("Fail to delete")
         }
+    }
+    
+    func editData(index : Int, title : String, text : String)
+    {
+        saveData(title: title, text: text)
+        deleteData(index: index)
     }
 }
