@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7JL-6Q-BlA">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PFp-mh-Yue">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yg7-sZ-DCZ">
                                     <size key="itemSize" width="195" height="187"/>
@@ -29,14 +29,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="w7r-jc-Sju" customClass="CollectionViewCell" customModule="ToDoNote" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="195" height="187"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="187"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="195" height="187"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQK-tT-zhU">
-                                                    <rect key="frame" x="75.5" y="10" width="44" height="21"/>
+                                                    <rect key="frame" x="75.666666666666671" y="10" width="44" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-L4-ONI">
-                                <rect key="frame" x="291" y="583" width="64" height="64"/>
+                                <rect key="frame" x="330" y="652" width="64" height="64"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" image="YES"/>
                                 </accessibility>
@@ -107,11 +107,139 @@
             <objects>
                 <viewController title="Edit Note" id="34H-Mk-4fW" customClass="EditNoteViewController" customModule="ToDoNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r7Q-RX-STZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfR-Ra-a96">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="HrR-nZ-uRB">
+                                        <connections>
+                                            <action selector="deleteNote:" destination="34H-Mk-4fW" id="GNH-MH-vkI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="VB1-F9-Kyf"/>
+                                    <barButtonItem systemItem="save" id="srd-8K-FxQ">
+                                        <connections>
+                                            <action selector="saveNote:" destination="34H-Mk-4fW" id="I10-j5-fAb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9l-Nr-NjA">
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXF-7M-S23">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xti-La-eRV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9UA-xi-aOc"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQZ-wL-l1D">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HPl-gu-IOM"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qsG-eF-gBw">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="H6R-Nf-b5L"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldEditing:" destination="34H-Mk-4fW" eventType="editingDidBegin" id="MUD-c0-MvX"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-P7-hEc">
+                                                <rect key="frame" x="0.0" y="150" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="zKl-kq-0xC"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="location"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a notification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QGY-Jw-Auw">
+                                                <rect key="frame" x="0.0" y="250" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4hn-ES-kCr"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-Xv-7RI">
+                                                <rect key="frame" x="0.0" y="200" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="gpc-vy-ShA"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zY0-P7-hEc" firstAttribute="width" secondItem="EXF-7M-S23" secondAttribute="width" id="3lr-IA-hPl"/>
+                                            <constraint firstItem="zY0-P7-hEc" firstAttribute="centerX" secondItem="EXF-7M-S23" secondAttribute="centerX" id="6Vm-J1-bQh"/>
+                                            <constraint firstItem="LRE-Xv-7RI" firstAttribute="width" secondItem="EXF-7M-S23" secondAttribute="width" id="7UJ-gX-ws3"/>
+                                            <constraint firstItem="TQZ-wL-l1D" firstAttribute="centerX" secondItem="EXF-7M-S23" secondAttribute="centerX" id="9fk-c9-k3Y"/>
+                                            <constraint firstItem="qsG-eF-gBw" firstAttribute="width" secondItem="EXF-7M-S23" secondAttribute="width" id="AAS-qO-QX5"/>
+                                            <constraint firstItem="QGY-Jw-Auw" firstAttribute="centerX" secondItem="EXF-7M-S23" secondAttribute="centerX" id="AgY-bJ-snH"/>
+                                            <constraint firstItem="Xti-La-eRV" firstAttribute="width" secondItem="EXF-7M-S23" secondAttribute="width" id="Bco-Wo-9Ga"/>
+                                            <constraint firstItem="qsG-eF-gBw" firstAttribute="centerX" secondItem="EXF-7M-S23" secondAttribute="centerX" id="JQf-5x-xwP"/>
+                                            <constraint firstItem="TQZ-wL-l1D" firstAttribute="top" secondItem="Xti-La-eRV" secondAttribute="bottom" id="V0r-J7-Phz"/>
+                                            <constraint firstItem="Xti-La-eRV" firstAttribute="top" secondItem="EXF-7M-S23" secondAttribute="top" id="aW6-Bz-sUr"/>
+                                            <constraint firstItem="QGY-Jw-Auw" firstAttribute="top" secondItem="LRE-Xv-7RI" secondAttribute="bottom" id="dhe-9B-zx6"/>
+                                            <constraint firstItem="zY0-P7-hEc" firstAttribute="top" secondItem="qsG-eF-gBw" secondAttribute="bottom" id="eAt-h6-fRh"/>
+                                            <constraint firstItem="LRE-Xv-7RI" firstAttribute="top" secondItem="zY0-P7-hEc" secondAttribute="bottom" id="nXr-tE-9bC"/>
+                                            <constraint firstItem="LRE-Xv-7RI" firstAttribute="centerX" secondItem="EXF-7M-S23" secondAttribute="centerX" id="piM-yt-taZ"/>
+                                            <constraint firstItem="Xti-La-eRV" firstAttribute="centerX" secondItem="EXF-7M-S23" secondAttribute="centerX" id="snB-e8-BWN"/>
+                                            <constraint firstItem="QGY-Jw-Auw" firstAttribute="width" secondItem="EXF-7M-S23" secondAttribute="width" id="vip-1x-zhf"/>
+                                            <constraint firstItem="qsG-eF-gBw" firstAttribute="top" secondItem="TQZ-wL-l1D" secondAttribute="bottom" id="xF7-rP-LYZ"/>
+                                            <constraint firstItem="TQZ-wL-l1D" firstAttribute="width" secondItem="EXF-7M-S23" secondAttribute="width" id="ySB-B9-UKR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EXF-7M-S23" secondAttribute="bottom" id="0wb-Kr-Moq"/>
+                                    <constraint firstItem="EXF-7M-S23" firstAttribute="leading" secondItem="T9l-Nr-NjA" secondAttribute="leading" id="deJ-cT-Exo"/>
+                                    <constraint firstItem="EXF-7M-S23" firstAttribute="top" secondItem="T9l-Nr-NjA" secondAttribute="top" id="fLk-Z5-NUJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="EXF-7M-S23" secondAttribute="trailing" id="n9g-YO-CPW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zfR-Ra-a96" firstAttribute="centerX" secondItem="URQ-sD-tTX" secondAttribute="centerX" id="1f9-Ba-gOn"/>
+                            <constraint firstItem="T9l-Nr-NjA" firstAttribute="trailing" secondItem="zfR-Ra-a96" secondAttribute="trailing" id="6km-C5-mqe"/>
+                            <constraint firstItem="zfR-Ra-a96" firstAttribute="width" secondItem="r7Q-RX-STZ" secondAttribute="width" id="EN7-4L-nq0"/>
+                            <constraint firstItem="URQ-sD-tTX" firstAttribute="bottom" secondItem="zfR-Ra-a96" secondAttribute="bottom" id="FGN-UM-8as"/>
+                            <constraint firstItem="EXF-7M-S23" firstAttribute="height" secondItem="r7Q-RX-STZ" secondAttribute="height" id="Fzp-LR-5R2"/>
+                            <constraint firstItem="T9l-Nr-NjA" firstAttribute="bottom" secondItem="zfR-Ra-a96" secondAttribute="top" id="bUg-9Z-Z0a"/>
+                            <constraint firstItem="T9l-Nr-NjA" firstAttribute="top" secondItem="URQ-sD-tTX" secondAttribute="top" id="bvJ-1g-fjz"/>
+                            <constraint firstItem="EXF-7M-S23" firstAttribute="width" secondItem="r7Q-RX-STZ" secondAttribute="width" id="c8L-Rb-FcM"/>
+                            <constraint firstItem="T9l-Nr-NjA" firstAttribute="leading" secondItem="zfR-Ra-a96" secondAttribute="leading" id="m3c-s2-dOZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="URQ-sD-tTX"/>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="qsG-eF-gBw" id="r2n-K9-gBR"/>
+                        <outlet property="detailInput" destination="TQZ-wL-l1D" id="Wqk-E0-H5H"/>
+                        <outlet property="titleInput" destination="Xti-La-eRV" id="GLB-SV-2sQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVW-Xj-awK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +250,7 @@
             <objects>
                 <viewController title="View Note (insert title)" id="Qop-zW-JzX" customClass="ViewNoteViewController" customModule="ToDoNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vWA-K5-ehq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9nj-Qs-Ras"/>
@@ -138,7 +266,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7JL-6Q-BlA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hLr-su-WkY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
