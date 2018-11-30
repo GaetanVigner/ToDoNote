@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47575FE721B19FBF00060DDA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47575FE621B19FBF00060DDA /* File.swift */; };
 		794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */; };
 		794AAC7E21B13F8500C79066 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */; };
 		85E3498F21AB89350063143D /* Plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E3498E21AB89350063143D /* Plus_button.png */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47575FE621B19FBF00060DDA /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = ToDoNote/File.swift; sourceTree = SOURCE_ROOT; };
 		794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + Toolbar.swift"; sourceTree = "<group>"; };
 		794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		85E3498E21AB89350063143D /* Plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus_button.png; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		85E3499121AB8FAD0063143D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				47575FE621B19FBF00060DDA /* File.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				85E41AF621AB830D00FC8F8A /* ToDoNote.xcdatamodeld in Sources */,
 				794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */,
 				85ED602A21AD1A37008FD0C2 /* CollectionViewCell.swift in Sources */,
+				47575FE721B19FBF00060DDA /* File.swift in Sources */,
 				85ED603721AD4878008FD0C2 /* EditNoteViewController.swift in Sources */,
 				85E41AEE21AB830D00FC8F8A /* AppDelegate.swift in Sources */,
 				794AAC7E21B13F8500C79066 /* LocationSearchViewController.swift in Sources */,
