@@ -105,7 +105,7 @@
         <!--Edit Note-->
         <scene sceneID="bd5-yh-59k">
             <objects>
-                <viewController title="Edit Note" id="34H-Mk-4fW" customClass="EditNoteViewController" customModule="ToDoNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editNoteView" title="Edit Note" id="34H-Mk-4fW" customClass="EditNoteViewController" customModule="ToDoNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r7Q-RX-STZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,7 +169,10 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="location"/>
+                                                <textInputTraits key="textInputTraits" textContentType="location"/>
+                                                <connections>
+                                                    <action selector="locationInputTouched:" destination="34H-Mk-4fW" eventType="editingDidBegin" id="Auv-q8-zjL"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a notification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QGY-Jw-Auw">
                                                 <rect key="frame" x="0.0" y="250" width="414" height="50"/>
@@ -238,12 +241,78 @@
                     <connections>
                         <outlet property="dateTextField" destination="qsG-eF-gBw" id="r2n-K9-gBR"/>
                         <outlet property="detailInput" destination="TQZ-wL-l1D" id="Wqk-E0-H5H"/>
+                        <outlet property="locationInput" destination="zY0-P7-hEc" id="1c9-IR-CJk"/>
+                        <outlet property="searchDisplayController" destination="mAN-NQ-Rqc" id="tCl-zo-XfB"/>
                         <outlet property="titleInput" destination="Xti-La-eRV" id="GLB-SV-2sQ"/>
+                        <segue destination="Qdh-L2-fDN" kind="show" identifier="searchLocation" id="H8Y-dD-qJ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVW-Xj-awK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="mAN-NQ-Rqc">
+                    <connections>
+                        <outlet property="delegate" destination="34H-Mk-4fW" id="q5c-BB-Wgf"/>
+                        <outlet property="searchContentsController" destination="34H-Mk-4fW" id="sXj-An-8d8"/>
+                        <outlet property="searchResultsDataSource" destination="34H-Mk-4fW" id="HC5-qC-pQN"/>
+                        <outlet property="searchResultsDelegate" destination="34H-Mk-4fW" id="0BP-e4-h9x"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1804" y="25.637181409295355"/>
+        </scene>
+        <!--Search location-->
+        <scene sceneID="55m-f8-osr">
+            <objects>
+                <viewController storyboardIdentifier="searchLocationView" title="Search location" id="Qdh-L2-fDN" customClass="LocationSearchViewController" customModule="ToDoNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qSb-TT-KoE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a place..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-Ii-qvg">
+                                <rect key="frame" x="0.0" y="64" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gX5-ep-kGC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputValidated:" destination="Qdh-L2-fDN" eventType="primaryActionTriggered" id="g3N-WE-XAu"/>
+                                    <action selector="searchInputEdited:" destination="Qdh-L2-fDN" eventType="editingChanged" id="OoS-RF-7yi"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cbg-nc-dpW">
+                                <rect key="frame" x="0.0" y="114" width="414" height="622"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qdh-L2-fDN" id="cYZ-8l-Y6n"/>
+                                    <outlet property="delegate" destination="Qdh-L2-fDN" id="SOi-2e-meX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cbg-nc-dpW" firstAttribute="centerX" secondItem="8GN-RQ-tUq" secondAttribute="centerX" id="0jQ-qW-R36"/>
+                            <constraint firstItem="bqj-Ii-qvg" firstAttribute="top" secondItem="8GN-RQ-tUq" secondAttribute="top" id="3QI-82-lqS"/>
+                            <constraint firstItem="bqj-Ii-qvg" firstAttribute="width" secondItem="Cbg-nc-dpW" secondAttribute="width" id="KUf-pF-zBm"/>
+                            <constraint firstItem="Cbg-nc-dpW" firstAttribute="leading" secondItem="8GN-RQ-tUq" secondAttribute="leading" id="NET-0S-WJC"/>
+                            <constraint firstItem="bqj-Ii-qvg" firstAttribute="width" secondItem="qSb-TT-KoE" secondAttribute="width" id="UdX-6e-lki"/>
+                            <constraint firstItem="Cbg-nc-dpW" firstAttribute="width" secondItem="qSb-TT-KoE" secondAttribute="width" id="V0m-FA-bY3"/>
+                            <constraint firstItem="Cbg-nc-dpW" firstAttribute="bottom" secondItem="8GN-RQ-tUq" secondAttribute="bottom" id="kuJ-z9-Kxg"/>
+                            <constraint firstItem="bqj-Ii-qvg" firstAttribute="centerX" secondItem="8GN-RQ-tUq" secondAttribute="centerX" id="ogw-0w-sQf"/>
+                            <constraint firstItem="Cbg-nc-dpW" firstAttribute="top" secondItem="bqj-Ii-qvg" secondAttribute="bottom" id="xgI-9a-Siz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8GN-RQ-tUq"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchInput" destination="bqj-Ii-qvg" id="h7M-cv-7aU"/>
+                        <outlet property="tableView" destination="Cbg-nc-dpW" id="is6-aq-ZLz"/>
+                        <segue destination="PZD-o1-NTe" kind="unwind" identifier="unwindToEdit" unwindAction="unwindToEdit:" id="Kct-Ou-jxd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXf-Hd-5xP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PZD-o1-NTe" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2641" y="25"/>
         </scene>
         <!--View Note (insert title)-->
         <scene sceneID="c4t-8T-Hof">
