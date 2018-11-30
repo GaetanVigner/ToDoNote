@@ -32,6 +32,13 @@ class EditNoteViewController: UIViewController {
     }
     
     @IBAction func deleteNote(_ sender: Any) {
+        let alertController = UIAlertController(title: "Confirm deletion ?", message: "Are you sure to delete this note ?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction! ) in
+            //insert deleteData function
+            self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+        }))
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func saveNote(_ sender: Any) {
@@ -43,6 +50,7 @@ class EditNoteViewController: UIViewController {
         } else {
             let myData = MyData()
             myData.saveData(title: titleInput.text!, text: detailInput.text!)
+            performSegue(withIdentifier: "unwindToMenu", sender: self)
         }
     }
     
