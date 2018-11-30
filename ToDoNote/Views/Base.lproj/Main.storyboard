@@ -245,9 +245,11 @@
                         <outlet property="searchDisplayController" destination="mAN-NQ-Rqc" id="tCl-zo-XfB"/>
                         <outlet property="titleInput" destination="Xti-La-eRV" id="GLB-SV-2sQ"/>
                         <segue destination="Qdh-L2-fDN" kind="show" identifier="searchLocation" id="H8Y-dD-qJ1"/>
+                        <segue destination="UVO-Kz-KFz" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenu:" id="Lms-Wb-phM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVW-Xj-awK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UVO-Kz-KFz" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="mAN-NQ-Rqc">
                     <connections>
                         <outlet property="delegate" destination="34H-Mk-4fW" id="q5c-BB-Wgf"/>
