@@ -7,32 +7,45 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
-    var items = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
-    var texts = ["00000", "111111", "222222", "33333", "4444", "5555555", "666666", "77777", "88888"]
+    var mydata = MyData()
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList(notification:)), name: NSNotification.Name(rawValue: "reload"), object: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        let items : [NSManagedObject]? = mydata.getDatas()
+        if items == nil {
+            return 0
+        }
+        return items!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.Title.text = items[indexPath.item]
-        cell.Content.text = texts[indexPath.item]
+        let items : [NSManagedObject]? = mydata.getDatas()
+        cell.Title.text = items![indexPath.item].value(forKey: "title") as? String
+        cell.Content.text = items![indexPath.item].value(forKey: "text") as? String
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let viewNoteViewController = storyboard?.instantiateViewController(withIdentifier: "ViewNote") as? ViewNoteViewController
-        viewNoteViewController?.selectedNoteText = self.texts[indexPath.row]
-        viewNoteViewController?.selectedtitle = self.items[indexPath.row]
+        let items : [NSManagedObject]? = mydata.getDatas()
+        viewNoteViewController?.mo = items?[indexPath.row]
+        viewNoteViewController?.index = indexPath.row
         self.navigationController?.pushViewController(viewNoteViewController!, animated: true)
+    }
+    
+    @objc func loadList(notification: NSNotification) {
+        self.collectionView.reloadData()
     }
     
     @IBAction func unwindToMenu(_ sender: UIStoryboardSegue){

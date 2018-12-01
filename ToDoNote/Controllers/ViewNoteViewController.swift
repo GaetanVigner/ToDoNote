@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewNoteViewController: UIViewController {
     @IBOutlet weak var noteTitle: UILabel!
@@ -14,14 +15,17 @@ class ViewNoteViewController: UIViewController {
     @IBOutlet weak var noteAlert: UITextField!
     @IBOutlet weak var noteTime: UITextField!
     
-    var selectedtitle: String = "Title"
-    var selectedNoteText: String = "Your note"
+    var mo : NSManagedObject!
+    var index : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        noteTitle.text = selectedtitle
-        noteText.text = selectedNoteText
-        // Do any additional setup after loading the view.
+        if mo.value(forKey: "title") != nil {
+            noteTitle.text = mo.value(forKey: "title") as? String
+        }
+        if mo.value(forKey: "text") != nil {
+            noteText.text = mo.value(forKey: "text") as? String
+        }
     }
     
     
@@ -31,5 +35,9 @@ class ViewNoteViewController: UIViewController {
     }
     
     @IBAction func editNote(sender: Any?){
+        let editNoteViewController = storyboard?.instantiateViewController(withIdentifier: "editNoteView") as? EditNoteViewController
+        editNoteViewController?.mo = mo!
+        editNoteViewController?.index = index!
+        self.navigationController?.pushViewController(editNoteViewController!, animated: true)
     }
 }

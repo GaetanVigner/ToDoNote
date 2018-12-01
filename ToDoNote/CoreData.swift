@@ -65,6 +65,7 @@ class MyData {
     
     func deleteData(index : Int)
     {
+        myItems = getDatas() ?? []
         if myItems.count > index {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
