@@ -1,0 +1,57 @@
+
+/* Class = "UIViewController"; title = "Edit Note"; ObjectID = "34H-Mk-4fW"; */
+"34H-Mk-4fW.title" = "Editer les Notes";
+
+/* Class = "UINavigationItem"; title = "My Notes"; ObjectID = "GR4-Ld-Ja0"; */
+"GR4-Ld-Ja0.title" = "Mes Notes";
+
+/* Class = "UITextField"; placeholder = "Alert"; ObjectID = "J0V-C4-5ya"; */
+"J0V-C4-5ya.placeholder" = "Alerte";
+
+/* Class = "UITextField"; placeholder = "Color"; ObjectID = "LRE-Xv-7RI"; */
+"LRE-Xv-7RI.placeholder" = "Couleur";
+
+/* Class = "UITextField"; placeholder = "Add a notification"; ObjectID = "QGY-Jw-Auw"; */
+"QGY-Jw-Auw.placeholder" = "Ajouter une notification";
+
+/* Class = "UIViewController"; title = "Search location"; ObjectID = "Qdh-L2-fDN"; */
+"Qdh-L2-fDN.title" = "Chercher un lieux;
+
+/* Class = "UIViewController"; title = "View Note"; ObjectID = "Qop-zW-JzX"; */
+"Qop-zW-JzX.title" = "Voir une Note";
+
+/* Class = "UITextField"; placeholder = "Enter details"; ObjectID = "TQZ-wL-l1D"; */
+"TQZ-wL-l1D.placeholder" = "Entrez les détails";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UdW-g0-FqR"; */
+"UdW-g0-FqR.normalTitle" = "Bouton";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "XQH-N2-htv"; */
+"XQH-N2-htv.text" = "Titre";
+
+/* Class = "UITextField"; placeholder = "Enter title"; ObjectID = "Xti-La-eRV"; */
+"Xti-La-eRV.placeholder" = "Entrez le titre";
+
+/* Class = "UITextField"; placeholder = "Search a place..."; ObjectID = "bqj-Ii-qvg"; */
+"bqj-Ii-qvg.placeholder" = "Recherche une lieu ...";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris "; ObjectID = "eI1-CE-V0a"; */
+"eI1-CE-V0a.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gQK-tT-zhU"; */
+"gQK-tT-zhU.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "qsG-eF-gBw"; */
+"qsG-eF-gBw.placeholder" = "Date";
+
+/* Class = "UITextView"; text = "Your Note"; ObjectID = "teh-cI-VUw"; */
+"teh-cI-VUw.text" = "Vos Notes";
+
+/* Class = "UITextField"; placeholder = "Time of the event"; ObjectID = "w5O-1E-Njy"; */
+"w5O-1E-Njy.placeholder" = "Date de l'évènement";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ynj-L4-ONI"; */
+"ynj-L4-ONI.normalTitle" = "Bouton";
+
+/* Class = "UITextField"; placeholder = "Add location"; ObjectID = "zY0-P7-hEc"; */
+"zY0-P7-hEc.placeholder" = "Ajouter un lieux";

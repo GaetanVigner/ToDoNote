@@ -46,7 +46,7 @@ class MyData {
         }
     }
     
-    func saveData(title : String, text : String)
+    func saveData(title : String, text : String, date : String?, location : String?)
     {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -54,6 +54,8 @@ class MyData {
         let newTask = NSManagedObject(entity: entity!, insertInto: context)
         newTask.setValue(title, forKey: "title")
         newTask.setValue(text, forKey: "text")
+        newTask.setValue(date, forKey: "date")
+        newTask.setValue(location, forKey: "location")
         
         do {
             try context.save()
@@ -65,6 +67,7 @@ class MyData {
     
     func deleteData(index : Int)
     {
+        myItems = getDatas() ?? []
         if myItems.count > index {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
@@ -81,9 +84,9 @@ class MyData {
         }
     }
     
-    func editData(index : Int, title : String, text : String)
+    func editData(index : Int, title : String, text : String, date : String?, location : String?)
     {
-        saveData(title: title, text: text)
+        saveData(title: title, text: text, date: date, location: location)
         deleteData(index: index)
     }
 }
