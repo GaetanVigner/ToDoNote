@@ -403,6 +403,12 @@
                                                     <action selector="editNoteWithSender:" destination="Qop-zW-JzX" eventType="touchUpInside" id="QP8-me-FMZ"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-st-RlX">
+                                                <rect key="frame" x="85" y="339" width="309" height="45"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration">
@@ -424,9 +430,11 @@
                                             <constraint firstItem="XQH-N2-htv" firstAttribute="top" secondItem="ZGe-FV-brD" secondAttribute="top" constant="20" id="Qqi-KC-hia"/>
                                             <constraint firstItem="teh-cI-VUw" firstAttribute="width" secondItem="w5O-1E-Njy" secondAttribute="width" id="Rnc-Gm-eSJ"/>
                                             <constraint firstItem="ZGe-FV-brD" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XQH-N2-htv" secondAttribute="trailing" id="RvJ-Gz-FYc"/>
+                                            <constraint firstItem="WuG-st-RlX" firstAttribute="width" secondItem="J0V-C4-5ya" secondAttribute="width" id="Tia-Pl-u9e"/>
                                             <constraint firstItem="MD9-T8-sda" firstAttribute="top" secondItem="Ysz-O4-PTw" secondAttribute="bottom" constant="20" id="U6k-HA-rLs"/>
                                             <constraint firstItem="J0V-C4-5ya" firstAttribute="centerY" secondItem="MD9-T8-sda" secondAttribute="centerY" id="a94-XP-ELQ"/>
                                             <constraint firstItem="XQH-N2-htv" firstAttribute="centerX" secondItem="ZGe-FV-brD" secondAttribute="centerX" id="bbA-MT-3Zf"/>
+                                            <constraint firstItem="WuG-st-RlX" firstAttribute="top" secondItem="teh-cI-VUw" secondAttribute="bottom" constant="20" id="c5x-yb-fpl"/>
                                             <constraint firstItem="Ysz-O4-PTw" firstAttribute="top" secondItem="XQH-N2-htv" secondAttribute="bottom" constant="20" id="dNh-kA-JNi"/>
                                             <constraint firstItem="teh-cI-VUw" firstAttribute="top" secondItem="J0V-C4-5ya" secondAttribute="bottom" constant="20" id="diM-eR-3py"/>
                                             <constraint firstItem="ZGe-FV-brD" firstAttribute="bottom" secondItem="UdW-g0-FqR" secondAttribute="bottom" constant="20" id="fBE-03-7df"/>
@@ -434,6 +442,7 @@
                                             <constraint firstItem="9FR-K0-TnW" firstAttribute="leading" secondItem="ZGe-FV-brD" secondAttribute="leading" constant="20" id="pHl-rG-GfD"/>
                                             <constraint firstItem="w5O-1E-Njy" firstAttribute="leading" secondItem="Ysz-O4-PTw" secondAttribute="trailing" constant="20" id="pae-cb-CWe"/>
                                             <constraint firstItem="J0V-C4-5ya" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MD9-T8-sda" secondAttribute="trailing" constant="8" symbolic="YES" id="sEZ-OC-Yjm"/>
+                                            <constraint firstItem="WuG-st-RlX" firstAttribute="height" secondItem="J0V-C4-5ya" secondAttribute="height" id="sSR-ct-GDl"/>
                                             <constraint firstItem="XQH-N2-htv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZGe-FV-brD" secondAttribute="leading" id="y3d-hH-3AK"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="ZGe-FV-brD"/>
@@ -444,6 +453,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gBL-yG-PLp" firstAttribute="top" secondItem="9nj-Qs-Ras" secondAttribute="top" priority="999" id="0rn-gA-hVr"/>
+                            <constraint firstItem="9nj-Qs-Ras" firstAttribute="trailing" secondItem="WuG-st-RlX" secondAttribute="trailing" constant="20" id="7m8-3N-dnu"/>
                             <constraint firstItem="gBL-yG-PLp" firstAttribute="leading" secondItem="9nj-Qs-Ras" secondAttribute="leading" priority="999" id="8Ya-zB-8M3"/>
                             <constraint firstItem="9nj-Qs-Ras" firstAttribute="top" secondItem="ZPR-L1-Kbh" secondAttribute="top" priority="999" id="Mik-3J-JNQ"/>
                             <constraint firstItem="9nj-Qs-Ras" firstAttribute="trailing" secondItem="ZPR-L1-Kbh" secondAttribute="trailing" priority="999" id="WhN-Jd-ZTy"/>
@@ -456,6 +466,7 @@
                     </view>
                     <connections>
                         <outlet property="noteAlert" destination="J0V-C4-5ya" id="mnT-38-P1R"/>
+                        <outlet property="noteLocation" destination="WuG-st-RlX" id="yIB-Lf-RcJ"/>
                         <outlet property="noteText" destination="teh-cI-VUw" id="wbz-Vb-tcW"/>
                         <outlet property="noteTime" destination="w5O-1E-Njy" id="1Gu-A9-ysF"/>
                         <outlet property="noteTitle" destination="XQH-N2-htv" id="3my-Hw-ai7"/>

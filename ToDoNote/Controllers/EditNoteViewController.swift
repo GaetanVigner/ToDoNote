@@ -21,6 +21,12 @@ class EditNoteViewController: UIViewController {
         if mo != nil && mo.value(forKey: "text") != nil {
             detailInput.text = mo.value(forKey: "text") as? String
         }
+        if mo != nil && mo.value(forKey: "date") != nil {
+            dateTextField.text = mo.value(forKey: "date") as? String
+        }
+        if mo != nil && mo.value(forKey: "location") != nil {
+            locationInput.text = mo.value(forKey: "location") as? String
+        }
     }
 
     @IBOutlet weak var dateTextField: UITextField!

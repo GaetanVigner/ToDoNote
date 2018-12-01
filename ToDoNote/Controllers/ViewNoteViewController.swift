@@ -14,6 +14,7 @@ class ViewNoteViewController: UIViewController {
     @IBOutlet weak var noteText: UITextView!
     @IBOutlet weak var noteAlert: UITextField!
     @IBOutlet weak var noteTime: UITextField!
+    @IBOutlet weak var noteLocation: UITextField!
     
     var mo : NSManagedObject!
     var index : Int!
@@ -25,6 +26,12 @@ class ViewNoteViewController: UIViewController {
         }
         if mo.value(forKey: "text") != nil {
             noteText.text = mo.value(forKey: "text") as? String
+        }
+        if mo.value(forKey: "date") != nil {
+            noteTime.text = mo.value(forKey: "date") as? String
+        }
+        if mo.value(forKey: "location") != nil {
+            noteLocation.text = mo.value(forKey: "location") as? String
         }
     }
     
