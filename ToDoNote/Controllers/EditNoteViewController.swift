@@ -27,6 +27,8 @@ class EditNoteViewController: UIViewController {
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var detailInput: UITextField!
     @IBOutlet weak var locationInput: UITextField!
+    @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var notificationTextField: UITextField!
     
     var mo : NSManagedObject!
     var index : Int!
