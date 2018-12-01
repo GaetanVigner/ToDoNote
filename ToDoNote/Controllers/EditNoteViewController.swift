@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class EditNoteViewController: UIViewController {
 
@@ -14,6 +15,12 @@ class EditNoteViewController: UIViewController {
         super.viewDidLoad()
         let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(EditNoteViewController.dismissPicker))
         dateTextField.inputAccessoryView = toolBar
+        if mo != nil && mo.value(forKey: "title") != nil {
+            titleInput.text = mo.value(forKey: "title") as? String
+        }
+        if mo != nil && mo.value(forKey: "text") != nil {
+            detailInput.text = mo.value(forKey: "text") as? String
+        }
     }
 
     @IBOutlet weak var dateTextField: UITextField!
@@ -21,6 +28,8 @@ class EditNoteViewController: UIViewController {
     @IBOutlet weak var detailInput: UITextField!
     @IBOutlet weak var locationInput: UITextField!
     
+    var mo : NSManagedObject!
+    var index : Int!
    
     @IBAction func locationInputTouched(_ sender: Any) {
         locationInput.endEditing(true)
@@ -35,7 +44,9 @@ class EditNoteViewController: UIViewController {
         let alertController = UIAlertController(title: "Confirm deletion ?", message: "Are you sure to delete this note ?", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction! ) in
-            //insert deleteData function
+            let myData = MyData()
+            myData.deleteData(index: self.index)
+            NotificationCenter.default.post(name: NSNotification.Name("reload"), object: nil)
             self.performSegue(withIdentifier: "unwindToMenu", sender: self)
         }))
         present(alertController, animated: true, completion: nil)
@@ -50,6 +61,7 @@ class EditNoteViewController: UIViewController {
         } else {
             let myData = MyData()
             myData.saveData(title: titleInput.text!, text: detailInput.text!)
+            NotificationCenter.default.post(name: NSNotification.Name("reload"), object: nil)
             performSegue(withIdentifier: "unwindToMenu", sender: self)
         }
     }
