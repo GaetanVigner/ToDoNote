@@ -62,7 +62,11 @@ class EditNoteViewController: UIViewController {
             present(alertController, animated: true, completion: nil)
         } else {
             let myData = MyData()
-            myData.saveData(title: titleInput.text!, text: detailInput.text!)
+            if self.index != nil {
+                myData.editData(index: index, title: titleInput.text!, text: detailInput.text!, date: dateTextField?.text, location: locationInput?.text)
+            } else {
+                myData.saveData(title: titleInput.text!, text: detailInput.text!, date: dateTextField?.text, location: locationInput?.text)
+            }
             NotificationCenter.default.post(name: NSNotification.Name("reload"), object: nil)
             performSegue(withIdentifier: "unwindToMenu", sender: self)
         }
