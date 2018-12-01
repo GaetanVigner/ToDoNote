@@ -1,0 +1,30 @@
+//
+//  Localizable.strings
+//  ToDoNote
+//
+//  Created by gaetan on 30/11/2018.
+//  Copyright © 2018 gaetan. All rights reserved.
+//
+"Confirm deletion ?" = "Confirm deletion ?";
+
+"Are you sure to delete this note ?" = "Are you sure to delete this note ?";
+
+"No" = "No";
+
+"Yes" = "Yes";
+
+"Error in input" = "Error in input";
+
+"Please enter a correct title and description for your task" = "Please enter a correct title and description for your task";
+
+"Confirm" = "Confirm";
+
+"An error occured while trying to geocode." = "An error occured while trying to geocode.";
+
+"Error" = "Error";
+
+"There is no note to delete" = "There is no note to delete";
+
+"Ok" = "Ok";
+
+

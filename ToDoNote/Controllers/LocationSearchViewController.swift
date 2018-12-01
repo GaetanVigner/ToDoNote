@@ -69,7 +69,7 @@ class LocationSearchViewController: UIViewController , CLLocationManagerDelegate
                 }
             }
             else {
-                print("An error occured while trying to geocode.")
+                print(NSLocalizedString("An error occured while trying to geocode.", comment: ""))
             }
         })
     }

@@ -11,5 +11,5 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Content: UITextField!
-    
+
 }

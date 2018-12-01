@@ -11,6 +11,7 @@
 		794AAC7B21B11FBB00C79066 /* UIDatePicker + Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */; };
 		794AAC7E21B13F8500C79066 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */; };
 		851C20A021B1DDAB00FE86E4 /* Note logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 851C209F21B1DDAB00FE86E4 /* Note logo.png */; };
+		856E9DF321B223D7009E6C99 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 856E9DF521B223D7009E6C99 /* Localizable.strings */; };
 		85E2BD1B21B1AB5900EF542D /* clock140.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E2BD1A21B1AB5700EF542D /* clock140.png */; };
 		85E2BD1D21B1AB8600EF542D /* menu140.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E2BD1C21B1AB8500EF542D /* menu140.png */; };
 		85E2BD1F21B1ABF800EF542D /* bell140.png in Resources */ = {isa = PBXBuildFile; fileRef = 85E2BD1E21B1ABF800EF542D /* bell140.png */; };
@@ -32,6 +33,10 @@
 		794AAC7A21B11FBB00C79066 /* UIDatePicker + Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDatePicker + Toolbar.swift"; sourceTree = "<group>"; };
 		794AAC7D21B13F8500C79066 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		851C209F21B1DDAB00FE86E4 /* Note logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Note logo.png"; sourceTree = "<group>"; };
+		856E9DEF21B21CF2009E6C99 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		856E9DF021B21CF9009E6C99 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		856E9DF421B223D7009E6C99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		856E9DF721B22440009E6C99 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		85E2BD1A21B1AB5700EF542D /* clock140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock140.png; sourceTree = "<group>"; };
 		85E2BD1C21B1AB8500EF542D /* menu140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu140.png; sourceTree = "<group>"; };
 		85E2BD1E21B1ABF800EF542D /* bell140.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell140.png; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		85E3499321AB8FF80063143D /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				856E9DF521B223D7009E6C99 /* Localizable.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 85E41AE121AB830C00FC8F8A;
 			productRefGroup = 85E41AEB21AB830D00FC8F8A /* Products */;
@@ -214,6 +221,7 @@
 				85E2BD1D21B1AB8600EF542D /* menu140.png in Resources */,
 				85E2BD1F21B1ABF800EF542D /* bell140.png in Resources */,
 				851C20A021B1DDAB00FE86E4 /* Note logo.png in Resources */,
+				856E9DF321B223D7009E6C99 /* Localizable.strings in Resources */,
 				85E41AFB21AB830F00FC8F8A /* LaunchScreen.storyboard in Resources */,
 				85E3498F21AB89350063143D /* Plus_button.png in Resources */,
 				85E41AF821AB830F00FC8F8A /* Assets.xcassets in Resources */,
@@ -243,10 +251,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		856E9DF521B223D7009E6C99 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				856E9DF421B223D7009E6C99 /* en */,
+				856E9DF721B22440009E6C99 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		85E41AF121AB830D00FC8F8A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				85E41AF221AB830D00FC8F8A /* Base */,
+				856E9DEF21B21CF2009E6C99 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -255,6 +273,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				85E41AFA21AB830F00FC8F8A /* Base */,
+				856E9DF021B21CF9009E6C99 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -266,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -327,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -33,6 +33,12 @@ class EditNoteViewController: UIViewController {
     var mo : NSManagedObject!
     var index : Int!
    
+    fileprivate func ErrorModal(title : String, message : String, button: String) {
+        let alertController = UIAlertController(title: title, message : message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: button, style : .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func locationInputTouched(_ sender: Any) {
         locationInput.endEditing(true)
         performSegue(withIdentifier: "searchLocation", sender: Any?.self)
@@ -43,22 +49,27 @@ class EditNoteViewController: UIViewController {
     }
     
     @IBAction func deleteNote(_ sender: Any) {
-        let alertController = UIAlertController(title: "Confirm deletion ?", message: "Are you sure to delete this note ?", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction! ) in
-            let myData = MyData()
-            myData.deleteData(index: self.index)
-            NotificationCenter.default.post(name: NSNotification.Name("reload"), object: nil)
-            self.performSegue(withIdentifier: "unwindToMenu", sender: self)
-        }))
-        present(alertController, animated: true, completion: nil)
+        if index != nil {
+            let alertController = UIAlertController(title: NSLocalizedString("Confirm deletion ?", comment: ""), message: NSLocalizedString("Are you sure to delete this note ?", comment: ""), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("No", comment: ""), style: .default, handler: nil))
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .default, handler: { (action: UIAlertAction! ) in
+                let myData = MyData()
+                myData.deleteData(index: self.index)
+                NotificationCenter.default.post(name: NSNotification.Name("reload"), object: nil)
+                self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+            }))
+            present(alertController, animated: true, completion: nil)
+        } else
+        {
+            ErrorModal(title: NSLocalizedString("Error", comment: ""), message:  NSLocalizedString("There is no note to delete", comment: ""), button: NSLocalizedString("Ok", comment: ""))
+        }
     }
     
     @IBAction func saveNote(_ sender: Any) {
         if titleInput.text == nil || titleInput.text == "" ||
             detailInput.text == nil || detailInput.text == "" {
-            let alertController = UIAlertController(title: "Error in input", message: "Please enter a correct title and description for your task", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+            let alertController = UIAlertController(title: NSLocalizedString("Error in input", comment: ""), message: NSLocalizedString("Please enter a correct title and description for your task", comment: ""), preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: NSLocalizedString("Confirm", comment: ""), style: .default, handler: nil))
             present(alertController, animated: true, completion: nil)
         } else {
             let myData = MyData()
